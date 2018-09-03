@@ -54,7 +54,7 @@ class AutoprefixerFilter extends BaseNodeFilter
         $pb->add('--use')->add('autoprefixer');
 
         if ($this->browsers) {
-            $pb->add('-b')->add(implode(',', $this->browsers));
+            $pb->add('-browsers')->add(implode(',', $this->browsers));
         }
 
         $output = FilesystemUtils::createTemporaryFile('autoprefixer');
